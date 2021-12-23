@@ -4,7 +4,7 @@ import ItemCount from "./ItemCount"
 function ItemListContainer() {
     return (
         <div>
-            <ItemCount/> 
+            <ItemCount stock={25} initial={1}/> 
         </div>
     )
 }
