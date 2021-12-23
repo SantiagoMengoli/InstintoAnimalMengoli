@@ -1,10 +1,10 @@
 import "./ItemListContainer.css"
+import ItemCount from "./ItemCount"
 
-function ItemListContainer({titulo, stock}) {
+function ItemListContainer() {
     return (
         <div>
-            <h1> {titulo} </h1>
-            <p>Cantidad {stock} </p>
+            <ItemCount/> 
         </div>
     )
 }

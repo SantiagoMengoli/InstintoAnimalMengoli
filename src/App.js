@@ -9,7 +9,7 @@ function App() {
     <div className="App">
         <NavBar/>
         <MainFoto/>
-        <ItemListContainer titulo="Modelos de Gorras" stock={100}/>
+        <ItemListContainer />
     </div>
   );
 }
