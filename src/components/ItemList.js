@@ -1,24 +1,21 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Item from './Item'
+import "./ItemList.css"
 
 
 
-function ItemList() {
+function ItemList({productList}) {
 
 const [productos , setProductos] = useState ([
-    {id : 1 , nombre : "Lobo" , stock : '3' , precio: "$1500"},
-    {id : 2 , nombre : "Tigre" , stock : "3" , precio: "$1500"},
-    {id : 3 , nombre : "Gallo" , stock : "3" , precio: "$1500"},
-    {id : 4 , nombre : "Leon" , stock : "3" , precio: "$1500"},
-    {id : 5 , nombre : "Pitbull" , stock : '3' , precio: "$1500"},
+ 
 ])
 const [loading, setLoading] = useState ([true])
 
 useEffect(() => {
    const promesa = new Promise ((res, rej) =>{
     setTimeout(()=>{
-        res(productos)
+        res(productList)
         setLoading(false)
     },2000)
 
@@ -28,20 +25,12 @@ useEffect(() => {
        setProductos(productos)
    })
 }, [])
-    if(loading){
-        return (
-            <div>
-                <p>Cargando Productos...</p>
-            </div>
-        )
 
-    }else{
         return (
-            <div>
-                <Item/>
+            <div className='itemList'>
+                {loading ? (<div> Cargando Productos...</div>) : (productos.map((producto) => <Item key={producto.id} producto ={producto}/>))}
             </div>
         )
-    }
 }
 
 export default ItemList
