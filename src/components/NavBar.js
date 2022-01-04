@@ -1,6 +1,6 @@
 import "./NavBar.css"
-import logo from "../img/logoinstintoanimal.jpg"
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
+import logo from "../images/logoinstintoanimal.jpg"
 
 function NavBar () {
     return(
