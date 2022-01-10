@@ -10,9 +10,9 @@ function NavBar () {
                 <img src={logo} alt="logo" className="navLogo"/>
             </header>
             <nav className="navBar">
-                <Link className="navBar--Word" to={"/inicio"}>Inicio</Link>
-                <Link className="navBar--Word" to={"/catalogo2022"}>Catalogo 2022</Link>
-                <Link className="navBar--Word" to={"/contacto"}>Contacto</Link>
+                <Link className="navBar--Word" to={"/"}>Inicio</Link>
+                <Link className="navBar--Word" to={"/category/gorras"}>Gorras</Link>
+                <Link className="navBar--Word" to={"/category/buzos"}>Buzos</Link>
                 <Link className="navBar--Word" to={"/carrito"}> <ShoppingCartOutlinedIcon/> </Link>
                 
             </nav>

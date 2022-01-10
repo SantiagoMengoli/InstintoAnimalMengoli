@@ -1,6 +1,6 @@
 .itemContainer{
     width: 100%;
-    height: 250px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,4 +10,9 @@
 }
 .itemWord{
     font-size: 20px;
+}
+.fotoProducto{
+    display: flex;
+    justify-content: center;
+    width: 150px;
 }

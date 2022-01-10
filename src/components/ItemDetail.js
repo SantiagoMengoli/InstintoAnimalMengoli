@@ -9,7 +9,7 @@ function ItemDetail({product}) {
         <div className='itemDetailContainer'>
             <p>{nombre}</p>
             <p>Precio: ${precio}</p>
-            <p>{foto}</p>
+            <img src={foto}/>
             <ItemCount stock = {stock} initial= {initial}/>
         </div>
     )

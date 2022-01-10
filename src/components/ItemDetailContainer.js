@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer() {
 
     const [product, setProduct] = useState ([])
     const [loading, setLoading] = useState (true)
-    const id = 4;
+
+    const {id} = useParams()
+    
     const productDetail =[
         {id : 1 , nombre : "Ciervo" , stock : '3' , precio: "$1500" , foto: "/img/ciervo.jpg"},
         {id : 2 , nombre : "Tigre" , stock : "3" , precio: "$1500" , foto: "/img/tigre.jpg"},
