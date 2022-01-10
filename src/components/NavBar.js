@@ -1,6 +1,7 @@
 import "./NavBar.css"
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import logo from "../images/logoinstintoanimal.jpg"
+import { Link } from "react-router-dom";
 
 function NavBar () {
     return(
@@ -9,10 +10,10 @@ function NavBar () {
                 <img src={logo} alt="logo" className="navLogo"/>
             </header>
             <nav className="navBar">
-                <a className="navBar--Word" href="#">Inicio</a>
-                <a className="navBar--Word" href="#">Catalogo 2022</a>
-                <a className="navBar--Word" href="#">Contacto</a>
-                <a className="navBar--Word" href="#"> <ShoppingCartOutlinedIcon/> </a>
+                <Link className="navBar--Word" to={"/inicio"}>Inicio</Link>
+                <Link className="navBar--Word" to={"/catalogo2022"}>Catalogo 2022</Link>
+                <Link className="navBar--Word" to={"/contacto"}>Contacto</Link>
+                <Link className="navBar--Word" to={"/carrito"}> <ShoppingCartOutlinedIcon/> </Link>
                 
             </nav>
         </div>
