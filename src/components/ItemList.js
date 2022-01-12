@@ -10,11 +10,11 @@ function ItemList() {
     const {id} = useParams()
 
     const productList =[
-        {id : 1 , nombre : "Ciervo" , stock : '3' , precio: "$1500" , foto: "/img/ciervo.jpg"},
-        {id : 2 , nombre : "Tigre" , stock : "3" , precio: "$1500" , foto: "/img/tigre.jpg"},
-        {id : 3 , nombre : "Gallo" , stock : "3" , precio: "$1500", foto: "/img/gallo.jpg"},
-        {id : 4 , nombre : "Elefante" , stock : "3" , precio: "$1500" , foto: "/img/elefante.jpg"},
-        {id : 5 , nombre : "Pitbull" , stock : '3' , precio: "$1500" ,foto: "/img/pitbull.jpg"},
+        {id : 1 , nombre : "Ciervo" , stock : '3' , precio: "$1500" , foto: "/img/ciervo.jpg", category: "gorras"},
+        {id : 2 , nombre : "Tigre" , stock : "3" , precio: "$1500" , foto: "/img/tigre.jpg", category: "gorras" },
+        {id : 3 , nombre : "Gallo" , stock : "3" , precio: "$1500", foto: "/img/gallo.jpg", category: "gorras"},
+        {id : 4 , nombre : "Elefante" , stock : "3" , precio: "$1500" , foto: "/img/elefante.jpg", category: "buzos"},
+        {id : 5 , nombre : "Pitbull" , stock : '3' , precio: "$1500" ,foto: "/img/pitbull.jpg", category: "buzos"},
     ]
 
 const [productos , setProductos] = useState ([
