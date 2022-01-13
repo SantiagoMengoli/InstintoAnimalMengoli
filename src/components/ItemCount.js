@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({stock , initial, props }) => {
+const ItemCount = ({stock , initial, onAdd }) => {
 
     const [contador, setContador] = useState(0)
 
@@ -12,7 +12,7 @@ const ItemCount = ({stock , initial, props }) => {
        if(contador >= initial) setContador (contador - 1)
     }
     const agregarCount = () =>{
-        props.onAdd(contador)
+        onAdd(contador)
     }
     return (
         <div className="itemCount--Container">
