@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
+import {contexto} from "./CartContext"
 
 function ItemDetail({product}) {
     
     const [mostrarBotonCompra, setMostrarBotonCompra] = useState(false)
     const [compra, setCompra] = useState ({})
     const {nombre , precio , foto,  stock , initial} = product
+    const {agregarProducto} = useContext (contexto)
    
     const onAdd =(contador) =>{
         setCompra ({
             ...product,
-            contador
+            contador,
+            
         })
+        agregarProducto(product, contador)
         setMostrarBotonCompra (true);
     }
     return (
