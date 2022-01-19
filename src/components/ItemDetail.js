@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 import {contexto} from "./CartContext"
+import { toast } from 'react-toastify'
 
 function ItemDetail({product}) {
     
@@ -18,6 +19,7 @@ function ItemDetail({product}) {
         })
         agregarProducto(product, contador)
         setMostrarBotonCompra (true);
+        toast.success(`Se agrego el produto al Carrito`)
     }
     return (
         <div className='itemDetailContainer'>

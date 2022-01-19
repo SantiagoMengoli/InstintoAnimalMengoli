@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemList from './components/ItemList';
 import Cart from './components/Cart';
 import CartProvider from './components/CartContext';
+import { ToastContainer} from 'react-toastify';
 
 
 
@@ -23,6 +24,7 @@ function App() {
                   <Route path="/product/:id"  element={<ItemDetailContainer/>}/>
                   <Route path="/cart" element = {<Cart/>}/>
                 </Routes>
+                <ToastContainer/>
             </BrowserRouter>
       </CartProvider> 
     </div>
