@@ -19,7 +19,6 @@ function ItemDetail({product}) {
         })
         agregarProducto(product, contador)
         setMostrarBotonCompra (true);
-        toast.success(`Se agrego el produto al Carrito`)
     }
     return (
         <div className='itemDetailContainer'>
