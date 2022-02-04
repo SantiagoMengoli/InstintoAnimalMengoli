@@ -5,22 +5,22 @@ import CartItem from "./CartItem"
 
 function Cart() {
 
-   const {carrito , precio_total} = useContext(contexto)
-   const {limpiarCarrito} = useContext (contexto)
-    
+    const { carrito, precio_total } = useContext(contexto)
+    const { limpiarCarrito } = useContext(contexto)
 
-    if (carrito.length > 0){
+
+    if (carrito.length > 0) {
         return (<div>
-                    <h1>Carrito de compras</h1>
-                {carrito.map((producto) => <CartItem key={producto.product.id} producto ={producto.product} contador = {producto.contador}/>)}
-                <button onClick = {limpiarCarrito}>Vaciar Carrito</button>
-                   
-                </div>)
-    }else{
-        return ( 
+            <h1>Carrito de compras</h1>
+            {carrito.map((i) => <CartItem key={i.id} producto={i.producto} contador={i.cantidad} />)}
+            <button onClick={limpiarCarrito}>Vaciar Carrito</button>
+
+        </div>)
+    } else {
+        return (
             <div className="cartContainer">
-                 <h1>Carrito de compras</h1>
-                    <h2>No hay productos en el carrito</h2>
+                <h1>Carrito de compras</h1>
+                <h2>No hay productos en el carrito</h2>
             </div>
         )
     }

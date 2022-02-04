@@ -1,19 +1,21 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({stock , initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
 
-    const [contador, setContador] = useState(0)
+    const [contador, setContador] = useState(1)
 
+    useEffect(() => {
+
+        onAdd(contador)
+    })
     const aumentarContador = () => {
-       if(contador < stock) setContador(contador + 1)
+        if (contador < stock) setContador(contador + 1)
     }
     const disminuirContador = () => {
-       if(contador >= initial) setContador (contador - 1)
+        if (contador > initial) setContador(contador - 1)
     }
-    const agregarCount = () =>{
-        onAdd(contador)
-    }
+
     return (
         <div className="itemCount--Container">
             <div className="contadorContainer">
@@ -22,7 +24,7 @@ const ItemCount = ({stock , initial, onAdd }) => {
                     <button onClick={disminuirContador}>-</button>
                     <button onClick={aumentarContador}>+</button>
                 </div>
-                <button onClick={agregarCount}>Agregar al Carrito</button>
+
             </div>
         </div>
     )

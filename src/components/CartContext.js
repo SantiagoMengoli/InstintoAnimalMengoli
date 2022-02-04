@@ -1,47 +1,53 @@
-import { createContext, useState } from 'react'; 
+import { createContext, useState } from 'react';
 import { toast } from 'react-toastify';
 
 
- export const contexto =createContext ()
+export const contexto = createContext()
 
-const {Provider} = contexto
+const { Provider } = contexto;
 
-const CartProvider = ({children}) => {
-    const [carrito, setCarrito] = useState ([])
-    const [precio_total, setPrecio_total] = useState (0)
-    const [cantidad_total, setCantidad_total] = useState (0)
+const CartProvider = ({ children }) => {
+    const [carrito, setCarrito] = useState([])
 
-    const agregarProducto = (product, contador) => {
-        const index = carrito.findIndex((item) => item.product.id === product.id);
-        if(index> -1){
+
+    const agregarProducto = (item) => {
+        const { id } = item;
+
+        const index = carrito.findIndex((item) => item.id === id);
+
+        if (index > -1) {
             toast.error(`Este producto ya se encuentra en el carro`)
+        } else {
+            setCarrito([...carrito, item])
+            toast.success(`Se agrego el producto correctamente`)
         }
-        setCarrito([...carrito, {product, contador}])
-        toast.success(`Se agrego el producto correctamente`)
-    }
-    
+
+    };
+
     const eliminarProducto = (id) => {
-        const items = carrito.filter ((product) => product.id !==id)
+        const items = carrito.filter((product) => product.id !== id)
         setCarrito(items)
     }
     const limpiarCarrito = () => {
         setCarrito([])
     }
-    const isInCart = () => {}
+    const precio_total = () => {
+        return carrito.reduce((acum, i) => acum + i.contador * i.product.precio, 0)
+    }
 
 
     return (
-        <Provider value = {{ 
+        <Provider value={{
             carrito,
             precio_total,
-            cantidad_total,
             agregarProducto,
             eliminarProducto,
-            limpiarCarrito}}>
+            limpiarCarrito
+        }}>
             {children}
         </Provider>
     )
-    
+
 }
 
 export default CartProvider
