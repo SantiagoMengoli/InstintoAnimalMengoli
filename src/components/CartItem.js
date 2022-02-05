@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { contexto } from './CartContext'
+import "./CartItem.css"
 
 
 function CartItem({ producto, contador, id }) {
@@ -8,9 +9,9 @@ function CartItem({ producto, contador, id }) {
     const { nombre, foto } = producto;
 
     return (
-        <div>
+        <div className='cartItem'>
             <h4>{nombre}</h4>
-            <img src={foto} style={{ width: '65px', height: '65px' }} alt={nombre} />
+            <img className='fotoItemCart' src={foto} style={{ width: '65px', height: '65px' }} alt={nombre} />
             <button onClick={() => eliminarProducto(id)}>Eliminar</button>
             <p>Cantidad: {contador}</p>
 

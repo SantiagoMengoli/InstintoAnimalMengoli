@@ -10,10 +10,16 @@ function Cart() {
 
 
     if (carrito.length > 0) {
-        return (<div>
-            <h1>Carrito de compras</h1>
-            {carrito.map((i) => <CartItem key={i.id} producto={i.producto} contador={i.cantidad} />)}
-            <button onClick={limpiarCarrito}>Vaciar Carrito</button>
+        return (<div className="cart" >
+            <h1 className="tituloCarrito">Carrito de compras</h1>
+            <div className="cartContainer">
+                {carrito.map((i) => <CartItem key={i.id} producto={i.producto} contador={i.cantidad} />)}
+            </div>
+            <div className="buttonContainer">
+                <button onClick={limpiarCarrito}>Vaciar Carrito</button>
+            </div>
+            
+            
 
         </div>)
     } else {

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { db } from "../Firebase";
 import { collection, getDoc, doc } from "firebase/firestore";
+import "./ItemDetailContainer.css"
 
 console.log(db);
 
@@ -41,10 +42,13 @@ function ItemDetailContainer() {
     }
     if (loading === false) {
         return (
-            <>
-                <ItemDetail key={id} product={product} id={id} />
-                {console.log(product)}
-            </>
+            <div className="ItemDetailContainer">
+                <> 
+                    <ItemDetail key={id} product={product} id={id} />
+                    {console.log(product)}
+                </>
+            </div>
+           
         );
     }
 }

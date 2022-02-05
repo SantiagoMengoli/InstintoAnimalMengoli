@@ -7,6 +7,7 @@ import ItemList from './components/ItemList';
 import Cart from './components/Cart';
 import CartProvider from './components/CartContext';
 import { ToastContainer } from 'react-toastify';
+import Footer from './components/Footer';
 
 
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
+          <Footer/>
           <ToastContainer />
         </BrowserRouter>
       </CartProvider>

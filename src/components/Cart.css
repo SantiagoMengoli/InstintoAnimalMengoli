@@ -1,0 +1,18 @@
+.cart{
+    background-color: black;
+}
+.cartContainer{
+    background-color: black;
+    display: inline-block;
+    color: rgb(235, 218, 122);
+}
+
+.tituloCarrito{
+    background-color: black;
+    color:rgb(235, 218, 122) ;
+    margin: 0px;
+    padding: 25px;
+}
+.buttonContainer{
+    background-color: black;
+}

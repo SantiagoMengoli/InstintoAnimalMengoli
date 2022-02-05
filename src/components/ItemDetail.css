@@ -1,0 +1,15 @@
+.itemDetail{
+    background-color: rgb(235, 218, 122);
+    color:black ;
+    padding:25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.fotoDetalle{
+    box-shadow: black 3px 3px 5px;
+    margin: 15px;
+    width: 30%;
+}
+.botonAgregarCarrito{
+    padding-top: 20px;
+}

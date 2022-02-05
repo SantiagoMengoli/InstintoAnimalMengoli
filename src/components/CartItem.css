@@ -1,0 +1,16 @@
+.cartItem{
+    background-color: rgb(235, 218, 122);
+    width: 450px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    justify-content: space-around;
+    margin: 10px;
+    box-shadow: white 1px 1px 4px;
+
+}
+.fotoItemCart{
+    box-shadow: black 2px 2px 5px;
+}
