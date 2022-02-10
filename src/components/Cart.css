@@ -3,8 +3,15 @@
 }
 .cartContainer{
     background-color: black;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     color: rgb(235, 218, 122);
+    width: 100%;
+}
+.letraPrecio_total{
+    font-size: 25px;
 }
 
 .tituloCarrito{
@@ -15,4 +22,9 @@
 }
 .buttonContainer{
     background-color: black;
+    padding: 20px;
+
+}
+.finalizarCompra{
+    margin: 10px;
 }

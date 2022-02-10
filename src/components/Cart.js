@@ -14,9 +14,12 @@ function Cart() {
             <h1 className="tituloCarrito">Carrito de compras</h1>
             <div className="cartContainer">
                 {carrito.map((i) => <CartItem key={i.id} producto={i.producto} contador={i.cantidad} />)}
+                <p className="letraPrecio_total"> Precio total: ${precio_total}</p>
             </div>
+        
             <div className="buttonContainer">
                 <button onClick={limpiarCarrito}>Vaciar Carrito</button>
+                <button className="finalizarCompra">Finalizar Compra</button>
             </div>
             
             
