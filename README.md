@@ -18,7 +18,7 @@ Se abre [http://localhost:3000](http://localhost:3000) para verlo en  el navegad
 
 El proyecto en su totalidad fue creado con React js que utiliza como pilares distintas tecnologias, como lo son: HTML, CSS, JavaScript. Ademas de complementarlo con herramientas como FireBase y bibliotecas como Bootstrap o Material UI. 
 
-####Especificamente dentro de cada uno se utilizo:
+#### Especificamente dentro de cada uno se utilizo:
 
 * HTML para su estructuracion.
 * CSS para darle el diseño correspondiente, dentro de de esto se utilizo FlexBox para darle forma y su respectiva distribucion.
