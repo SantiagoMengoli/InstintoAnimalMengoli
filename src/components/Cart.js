@@ -4,6 +4,8 @@ import "./Cart.css"
 import CartItem from "./CartItem"
 import { db } from "../Firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { toast } from "react-toastify";
+
 
 function Cart() {
 
@@ -30,7 +32,8 @@ function Cart() {
         request
             .then((result) => {
                 setOrder(result.id)
-                alert("Su compra se ha realizado con exito: Orden " + result.id)
+                toast.success("Su compra se ha realizado con exito: Orden " + result.id)
+                
             })
             .catch((error) => {
                 alert("Se ha producido un error " + error)
