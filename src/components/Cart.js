@@ -22,7 +22,6 @@ function Cart() {
         const order = {
             user,
             carrito,
-            precio_total,
             created_at: serverTimestamp()
         }
     
