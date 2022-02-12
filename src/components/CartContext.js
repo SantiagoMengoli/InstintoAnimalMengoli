@@ -32,7 +32,7 @@ const CartProvider = ({ children }) => {
         setCarrito([])
     }
     const precio_total = () => {
-        return carrito.reduce((acum, i) => acum + i.contador * i.product.precio, 0)
+        return carrito.reduce((acum, i) => acum + i.cantidad * i.producto.precio, 0)
     }
 
 
