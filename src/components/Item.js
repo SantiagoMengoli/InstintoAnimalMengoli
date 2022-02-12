@@ -3,7 +3,7 @@ import React from 'react'
 import "./Item.css"
 
 function Item({ producto }) {
-    const { nombre, precio, foto, stock,  id } = producto;
+    const { nombre, precio, foto, stock, id } = producto;
 
     return (
         <div className='itemContainer'>
